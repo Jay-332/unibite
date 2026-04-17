@@ -1,0 +1,110 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id           String          @id @default(cuid())
+  email        String          @unique
+  password     String
+  name         String
+  role         String          @default("STUDENT") // STUDENT, CANTEEN_ADMIN
+  managedCanteenId String?
+  phoneNumber  String?
+  tokenBalance Float           @default(0)
+  dailyBudget  Float           @default(0)
+  savingsGoal  Float           @default(0)
+  createdAt    DateTime        @default(now())
+  
+  orders       Order[]
+  transactions Transaction[]
+  dailySpends  DailySpending[]
+}
+
+model Canteen {
+  id        String     @id @default(cuid())
+  name      String
+  location  String
+  openTime  String
+  closeTime String
+  isOpen    Boolean    @default(true)
+  imageUrl  String?
+  rating    Float      @default(0)
+  
+  menuItems MenuItem[]
+  orders    Order[]
+}
+
+model MenuItem {
+  id              String      @id @default(cuid())
+  canteenId       String
+  name            String
+  description     String?
+  price           Float
+  category        String
+  imageUrl        String?
+  isAvailable     Boolean     @default(true)
+  preparationTime Int         @default(10) // in minutes
+  isVeg           Boolean     @default(true)
+  tags            String[]
+  
+  canteen         Canteen     @relation(fields: [canteenId], references: [id])
+  orderItems      OrderItem[]
+}
+
+model Order {
+  id                 String      @id @default(cuid())
+  userId             String
+  canteenId          String
+  totalAmount        Float
+  status             String      @default("PENDING") // PENDING, PREPARING, READY, COMPLETED, CANCELLED
+  pickupTime         DateTime?
+  specialInstructions String?
+  createdAt          DateTime    @default(now())
+  completedAt        DateTime?
+  
+  user               User        @relation(fields: [userId], references: [id])
+  canteen            Canteen     @relation(fields: [canteenId], references: [id])
+  items              OrderItem[]
+}
+
+model OrderItem {
+  id             String   @id @default(cuid())
+  orderId        String
+  menuItemId     String
+  quantity       Int
+  price          Float
+  customizations String?
+  
+  order          Order    @relation(fields: [orderId], references: [id])
+  menuItem       MenuItem @relation(fields: [menuItemId], references: [id])
+}
+
+model Transaction {
+  id           String   @id @default(cuid())
+  userId       String
+  type         String   // DEPOSIT, WITHDRAWAL, PAYMENT, REFUND
+  amount       Float
+  description  String?
+  orderId      String?
+  timestamp    DateTime @default(now())
+  balanceAfter Float
+  
+  user         User     @relation(fields: [userId], references: [id])
+}
+
+model DailySpending {
+  id          String   @id @default(cuid())
+  userId      String
+  date        DateTime @db.Date
+  totalSpent  Float    @default(0)
+  orderCount  Int      @default(0)
+  isOverBudget Boolean @default(false)
+  
+  user        User     @relation(fields: [userId], references: [id])
+
+  @@unique([userId, date])
+}

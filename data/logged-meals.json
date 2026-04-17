@@ -1,0 +1,125 @@
+[
+  {
+    "id": "log_1768028507553_wskp3xial",
+    "canteenId": "c1",
+    "name": "Masala Dosa",
+    "price": 60,
+    "category": "Breakfast",
+    "mealPeriod": [
+      "Breakfast",
+      "Snacks"
+    ],
+    "type": "veg",
+    "isHealthy": true,
+    "isDaily": false,
+    "rating": 4.8,
+    "prepTime": "15m",
+    "image": "https://images.unsplash.com/photo-1668236368031-482086c2e36b?auto=format&fit=crop&q=80&w=1000",
+    "description": "Crispy rice crepe filled with spiced potato mix, served with chutney.",
+    "stagedFromSlot": "Breakfast",
+    "isManual": false,
+    "timestamp": "2026-01-10T07:01:47.553Z",
+    "originalItem": {
+      "id": "m2",
+      "canteenId": "c1",
+      "name": "Masala Dosa",
+      "price": 60,
+      "category": "Breakfast",
+      "mealPeriod": [
+        "Breakfast",
+        "Snacks"
+      ],
+      "type": "veg",
+      "isHealthy": true,
+      "isDaily": false,
+      "rating": 4.8,
+      "prepTime": "15m",
+      "image": "https://images.unsplash.com/photo-1668236368031-482086c2e36b?auto=format&fit=crop&q=80&w=1000",
+      "description": "Crispy rice crepe filled with spiced potato mix, served with chutney.",
+      "stagedFromSlot": "Breakfast"
+    },
+    "loggedFromSlot": "Breakfast"
+  },
+  {
+    "id": "log_1768028507553_g0e7hj877",
+    "canteenId": "c1",
+    "name": "Veg Thali",
+    "price": 80,
+    "category": "Main Course",
+    "mealPeriod": [
+      "Lunch",
+      "Dinner"
+    ],
+    "type": "veg",
+    "isHealthy": true,
+    "isDaily": false,
+    "rating": 4.5,
+    "prepTime": "10m",
+    "image": "https://images.unsplash.com/photo-1546833999-b9f58160293e?auto=format&fit=crop&q=80&w=1000",
+    "description": "Complete meal with roti, dal, rice, and seasonal vegetables.",
+    "stagedFromSlot": "Lunch",
+    "isManual": false,
+    "timestamp": "2026-01-10T07:01:47.553Z",
+    "originalItem": {
+      "id": "m1",
+      "canteenId": "c1",
+      "name": "Veg Thali",
+      "price": 80,
+      "category": "Main Course",
+      "mealPeriod": [
+        "Lunch",
+        "Dinner"
+      ],
+      "type": "veg",
+      "isHealthy": true,
+      "isDaily": false,
+      "rating": 4.5,
+      "prepTime": "10m",
+      "image": "https://images.unsplash.com/photo-1546833999-b9f58160293e?auto=format&fit=crop&q=80&w=1000",
+      "description": "Complete meal with roti, dal, rice, and seasonal vegetables.",
+      "stagedFromSlot": "Lunch"
+    },
+    "loggedFromSlot": "Lunch"
+  },
+  {
+    "id": "log_1768028507553_3npitp8d0",
+    "canteenId": "c1",
+    "name": "Veg Thali",
+    "price": 80,
+    "category": "Main Course",
+    "mealPeriod": [
+      "Lunch",
+      "Dinner"
+    ],
+    "type": "veg",
+    "isHealthy": true,
+    "isDaily": false,
+    "rating": 4.5,
+    "prepTime": "10m",
+    "image": "https://images.unsplash.com/photo-1546833999-b9f58160293e?auto=format&fit=crop&q=80&w=1000",
+    "description": "Complete meal with roti, dal, rice, and seasonal vegetables.",
+    "stagedFromSlot": "Dinner",
+    "isManual": false,
+    "timestamp": "2026-01-10T07:01:47.553Z",
+    "originalItem": {
+      "id": "m1",
+      "canteenId": "c1",
+      "name": "Veg Thali",
+      "price": 80,
+      "category": "Main Course",
+      "mealPeriod": [
+        "Lunch",
+        "Dinner"
+      ],
+      "type": "veg",
+      "isHealthy": true,
+      "isDaily": false,
+      "rating": 4.5,
+      "prepTime": "10m",
+      "image": "https://images.unsplash.com/photo-1546833999-b9f58160293e?auto=format&fit=crop&q=80&w=1000",
+      "description": "Complete meal with roti, dal, rice, and seasonal vegetables.",
+      "stagedFromSlot": "Dinner"
+    },
+    "loggedFromSlot": "Dinner"
+  }
+]

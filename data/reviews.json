@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1768023705290",
+    "itemId": "m1768020922109",
+    "userId": "u1",
+    "userName": "Rahul Sharma",
+    "rating": 4,
+    "comment": "Loved it",
+    "date": "2026-01-10T05:41:45.290Z"
+  },
+  {
+    "id": "1768023800282",
+    "itemId": "m1768020922109",
+    "userId": "user_1767930026781",
+    "userName": "Khushi",
+    "rating": 5,
+    "comment": "Very good and not watered down like the other canteens",
+    "date": "2026-01-10T05:43:20.282Z"
+  },
+  {
+    "id": "1768286928446",
+    "itemId": "kuksi_b2",
+    "userId": "u1",
+    "userName": "Rahul Sharma",
+    "rating": 5,
+    "comment": "qer",
+    "date": "2026-01-13T06:48:48.446Z"
+  },
+  {
+    "id": "1768380661501",
+    "itemId": "kuksi_b1",
+    "userId": "u1",
+    "userName": "Rahul Sharma",
+    "rating": 2,
+    "comment": "",
+    "date": "2026-01-14T08:51:01.501Z"
+  }
+]
